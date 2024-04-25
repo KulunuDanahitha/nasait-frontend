@@ -1,0 +1,31 @@
+.discountmanage {
+    width: 76%;
+    margin-top: 70px;
+    margin-left: 22%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.discountmanage h1 {
+    padding: 10PX;
+    color: blue;
+}
+
+
+.adddiscountbutton {
+    padding: 10px;
+    margin: 10px;
+    margin-top: 20px;
+    position: absolute;
+    /* Changed display to absolute positioning */
+    top: 0;
+    /* Adjust top positioning as needed */
+    right: 0;
+    /* Align to the right */
+    background-color: rgb(99, 32, 224);
+    color: rgb(240, 230, 230);
+    border: none;
+    border-radius: 5px;
+}

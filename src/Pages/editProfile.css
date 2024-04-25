@@ -1,0 +1,73 @@
+.edit-account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    width: 600px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(205, 6, 6, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: #2913d4;
+    /* Optional: Adjust margin as needed */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.label-left {
+    width: 150px;
+}
+
+.input-right {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #3e1dd0;
+    border-radius: 5px;
+    outline: #230cf1;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel-button,
+.save-changes-button {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-button {
+    background-color: #007bff;
+    color: #fff;
+    width: 150px;
+}
+
+.save-changes-button {
+    background-color: #2913d4;
+    color: #fff;
+    width: 150px;
+}
+
+.cancel-button:hover,
+.save-changes-button:hover {
+    opacity: 0.8;
+}

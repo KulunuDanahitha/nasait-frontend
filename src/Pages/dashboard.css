@@ -1,0 +1,10 @@
+.fulldashboard {
+    width: 76%;
+    margin-top: 70px;
+    margin-left: 22%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    position: relative;
+    /* Added position relative */
+}

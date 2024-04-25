@@ -1,0 +1,59 @@
+/* sideBar.css */
+
+.sidebar {
+    top: 55px;
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+    /* Set the left pane width to 350px */
+    background-color: #f0f0f0;
+    /* Optional: Add a light gray background */
+    list-style: none;
+    /* Remove default bullet points from list items */
+    padding: 20px;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.left-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4d4d4d;
+    margin-bottom: 20px;
+    margin-left: 20px;
+
+}
+
+.left-item {
+    margin-bottom: 15px;
+    /* Add some spacing between list items */
+}
+
+.left-link {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: #007bff;
+    /* Set text color to blue */
+    display: block;
+    /* Make links fill the entire list item width */
+    padding: 5px 20px;
+    /* Add some padding for better visual separation */
+    font-size: 20px;
+}
+
+.left-link:hover {
+    background-color: #e8e8e8;
+    /* Add a hover effect for visual feedback */
+}
+
+.bi {
+    font-size: 20px;
+    /* Increase font size for better visibility */
+    margin-right: 15px;
+    /* Maintain spacing between icons and text */
+    color: rgb(77, 30, 217);
+    /* Set color to blue */
+    font-weight: bold;
+    /* Make the icons bold for emphasis */
+}

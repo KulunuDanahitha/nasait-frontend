@@ -1,0 +1,114 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Set the height to fill the viewport */
+    background-image: url('../images/login.png');
+    /* Path to your image */
+    background-size: cover;
+    /* Cover the entire container */
+    background-position: center;
+    /* Center the image */
+}
+
+/* Styles for the login form */
+/* .login-form {
+    width: 400px;
+    
+    padding: 20px;
+    background-color: rgb(60, 127, 199);
+    border-radius: 8px;
+} */
+
+.login-form {
+    width: 400px;
+    /* Adjust width as needed */
+    padding: 20px;
+    background-color: rgb(60, 127, 199);
+    border-radius: 8px;
+    box-shadow: 20px 10px 20px rgba(243, 247, 4, 0.2); /* Add a shadow for depth */
+    transform: perspective(2000px) rotateX(5deg); /* Add perspective and rotation */
+}
+
+
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(252, 252, 252);
+}
+
+.login-form h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #FFD700;
+    font-size: 50px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: aliceblue;
+    text-align: center;
+    
+}
+
+.form-group input {
+    width: 80%;
+    padding: 10px;
+    background-color: #c0bddd;
+    border-radius: 5px;
+    border: 1px solid #1b09c0;
+    margin: 0 auto;
+        /* Add this line */
+    display: block;
+    
+
+}
+
+button[type="submit"] {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f335f;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+        
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the forget password text */
+.login-form span {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    /* Adjust as needed */
+    color: #e6d7d7;
+    cursor: pointer;
+    /* Change color as desired */
+}
+
+/* Style for the horizontal line */
+.login-form hr {
+    border: 0;
+    height: 2px;
+    background-color: #faf4f4;
+    /* Change color as desired */
+    margin-bottom: 20px;
+    /* Adjust as needed */
+}

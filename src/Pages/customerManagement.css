@@ -1,0 +1,40 @@
+.customermanagement {
+    width: 76%;
+    margin-top: 70px;
+    margin-left: 22%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+
+.customermanagement h1 {
+    padding: 10PX;
+    color: blue;
+}
+
+.addcustomerbttn{
+    padding: 10px;
+    margin: 10px;
+    margin-top: 20px;
+    position: absolute;
+    /* Changed display to absolute positioning */
+    top: 0;
+    /* Adjust top positioning as needed */
+    right: 0;
+    /* Align to the right */
+    background-color: rgb(62, 7, 163);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+
+}
+
+.addcustomerbttn Link {
+    color: rgb(171, 33, 33);
+}
+
+.customerstatus {
+    cursor: pointer;
+}
