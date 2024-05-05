@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from "react-router-dom"
 import { useState } from "react";
 import axios from "axios";
+import { useEffect } from "react";
 
 
 
@@ -13,36 +14,88 @@ const AddItem = () => {
       const [items, setItems] = useState({
         itemId: "",
         itemname: "",
-        categoryname: "",
+        categoryId: "",
         brandname: "",
         description: "",
-        image: "",
+     
       });
+
+      
+      const [category, setCategory] = useState([]);
+
+      useEffect(() => {
+        const fecthAllcategory= async () => {
+          try {
+            const res = await axios.get("http://localhost:8081/category");
+            setCategory(res.data);
+          } catch (err) {
+            console.log(err);
+          }
+        };
+        fecthAllcategory();
+      }, []);
 
 
        const [errors, setErrors] = useState({});
-       const navigate = useNavigate();
+
+    
+
+        const [file, setFile] = useState();
+         const [data, setData] = useState();
+
+           const handleFile = (e) => {
+                setFile(e.target.files[0]);
+              };
+     
+
+ 
+
+           
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      let error = { ...errors };
+
+      setErrors(error); // Set errors object
+      setItems((prev) => ({ ...prev, [name]: value }));
+    };
+           
+
+   const navigate = useNavigate();
+   
 
 
-         const handleChange = (e) => {
-           const { name, value } = e.target;
-           let error = { ...errors };
+          const handleClick = async (e) => {
+            e.preventDefault();
 
+            
 
-           setErrors(error); // Set errors object
-           setItems((prev) => ({ ...prev, [name]: value }));
-         };
+            try {
+              const itemResponse = await axios.post(
+                "http://localhost:8081/item",
+                items
+              );
+              const itemId = itemResponse.data.itemId;
 
-           const handleClick = async (e) => {
-             e.preventDefault();
+               const formdata = new FormData();
+               formdata.append("image", file);
 
-             try {
-               await axios.post("http://localhost:8081/item", items);
-               navigate("/");
-             } catch (err) {
-               console.log(err);
-             }
-           };
+              await axios.post(
+                `http://localhost:8081/upload/${itemId}`,
+                formdata
+              ).then(response => {
+                  console.log(response.data.Message);
+                  navigate("/headandleft/manageitem");
+                })
+
+              navigate("/headandleft/manageitem");
+            } catch (err) {
+              console.error(
+                "Error while adding category and uploading image:",
+                err
+              );
+              // Here you can set an error state to display a message to the user
+            }
+          };
 
   return (
     <div>
@@ -63,19 +116,21 @@ const AddItem = () => {
               />
             </div>
             <div className="input-group">
-              <label htmlFor="categoryname" className="label-left">
-                Category Name
+              <label htmlFor="categoryId" className="label-left">
+                Category Id
               </label>
               <select
                 type="text"
-                id="categoryname"
+                id="categoryId"
                 onChange={handleChange}
-                name="categoryname"
+                name="categoryId"
                 className="input-right"
               >
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
+                {category.map((category) => (
+                  <option key={category.id} value={category.id}>
+                    {category.category_id}
+                  </option>
+                ))}
               </select>
             </div>
             <div className="input-group">
@@ -102,7 +157,7 @@ const AddItem = () => {
                 className="input-right"
               />
             </div>
-      
+
             <div className="input-group">
               <label htmlFor="image" className="label-left">
                 Image
@@ -111,12 +166,12 @@ const AddItem = () => {
                 type="file"
                 id="image"
                 name="image"
-                onChange={handleChange}
+                onChange={handleFile}
               />
             </div>
 
             <div className="button-group">
-              <Link to="/">
+              <Link to="/headandleft/manageitem">
                 <button className="cancel-button"> Cancel </button>
               </Link>
               <button className="save-changes-button" onClick={handleClick}>

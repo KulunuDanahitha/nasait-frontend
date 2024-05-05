@@ -1,0 +1,16 @@
+
+.displayitem {
+    width: 76%;
+    margin-top: 70px;
+    margin-left: 22%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    position: relative;
+
+}
+
+.displayitem h1 {
+    padding: 10PX;
+    color: blue;
+}

@@ -51,7 +51,7 @@ const DiscountManage = () => {
     <div className="discountmanage">
       <h1> Discount Manage </h1>
 
-      <Link to="/adddiscount">
+      <Link to="/headandleft/adddiscount">
         <button className="adddiscountbutton">Add new Discount </button>
       </Link>
 
@@ -83,8 +83,9 @@ const DiscountManage = () => {
                 <TableCell align="center">
                   {" "}
                   <div className="supplierstatus">
-                    <Link to={`/updatediscount/${discount.discount_id}`}>
-                      
+                    <Link
+                      to={`/headandleft/updatediscount/${discount.discount_id}`}
+                    >
                       <i class="bi bi-pencil-fill"></i>
                     </Link>
                     <i

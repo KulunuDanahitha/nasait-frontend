@@ -55,7 +55,7 @@ const AddDiscount = () => {
 
     try {
       await axios.post("http://localhost:8081/discount", discounts);
-      navigate("/");
+      navigate("/headandleft/discountmanage");
     } catch (err) {
       console.log(err);
     }
@@ -106,7 +106,7 @@ const AddDiscount = () => {
           </div>
 
           <div className="button-group">
-            <Link to="/">
+            <Link to="/headandleft/discountmanage">
               <button className="cancel-button"> Back </button>
             </Link>
 

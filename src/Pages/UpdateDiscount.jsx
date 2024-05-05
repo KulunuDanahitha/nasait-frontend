@@ -15,7 +15,7 @@ const [discounts, setDiscounts] = useState({
 
   const navigate = useNavigate();
   const location = useLocation();
-  const discountId = location.pathname.split("/")[2];
+  const discountId = location.pathname.split("/")[3];
 
   useEffect(() => {
     const fecthDiscount = async () => {
@@ -54,7 +54,7 @@ const [discounts, setDiscounts] = useState({
       );
 
       //await axios.put(`http://localhost:8081/customer/${customerId}`, customers);
-      navigate("/");
+      navigate("/headandleft/discountmanage");
     } catch (err) {
       console.log(err);
     }
@@ -106,11 +106,14 @@ const [discounts, setDiscounts] = useState({
           </div>
 
           <div className="button-group">
-            <Link to="/">
+            <Link to="/headandleft/discountmanage">
               <button className="cancel-button"> Back </button>
             </Link>
 
-            <button className="updatediscountsubmitbutton" onClick={handleClick}>
+            <button
+              className="updatediscountsubmitbutton"
+              onClick={handleClick}
+            >
               Update Discount
             </button>
           </div>

@@ -1,0 +1,63 @@
+.billing {
+    width: 76%;
+    margin-top: 70px;
+    margin-left: 22%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f0e1e1;
+    position: relative;
+}
+
+
+
+.displaybill {
+    width: 76%;
+    margin-top: 70px;
+    margin-left: 22%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f0e1e1;
+    position: relative;
+}
+
+.billing h1 {
+    padding: 10PX;
+    color: blue;
+    text-align: center;
+
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 30%;
+}
+
+.label-left {
+    margin-right: 10px;
+    /* Added margin for spacing between label and input */
+}
+
+.input-right {
+    width: 100%;
+    /* Adjusted input width to fill remaining space */
+}
+
+
+.billaddbtttn {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+

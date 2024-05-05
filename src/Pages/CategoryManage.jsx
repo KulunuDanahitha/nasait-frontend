@@ -51,7 +51,7 @@ const CategoryManage = () => {
     <div className="categorymanage">
       <h1> Category Manage </h1>
 
-      <Link to="/addcategory">
+      <Link to="/headandleft/addcategory">
         <button className="addcategorybutton"> Add new Category </button>
       </Link>
 
@@ -81,9 +81,13 @@ const CategoryManage = () => {
 
                 <TableCell align="center">
                   <div className="supplierstatus">
-                    <Link to={`/updatecategory/${category.category_id}`}>
+                    <Link
+                      to={`/headandleft/updatecategory/${category.category_id}`}
+                    >
+                      {/* to={`/headandleft/updatesupplier/${supplier.supplier_id}`} */}
                       <i class="bi bi-pencil-fill"></i>
                     </Link>
+
                     <i
                       class="bi bi-trash-fill"
                       onClick={() => handleDelete(category.category_id)}

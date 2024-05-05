@@ -16,7 +16,7 @@ function UpdateCategory() {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const categoryId = location.pathname.split("/")[2];
+  const categoryId = location.pathname.split("/")[3];
 
   useEffect(() => {
     const fetchCategory = async () => {
@@ -57,7 +57,7 @@ function UpdateCategory() {
 
     try {
       await axios.put(`http://localhost:8081/category/${categoryId}`, categories);
-      navigate("/");
+      navigate("/headandleft/categorymanage");
     } catch (err) {
       console.log(err);
     }
@@ -97,7 +97,7 @@ function UpdateCategory() {
             </div>
 
             <div className="button-group">
-              <Link to="/">
+              <Link to="/headandleft/categorymanage">
                 <button className="cancel-button"> Back </button>
               </Link>
 

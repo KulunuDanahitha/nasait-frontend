@@ -34,24 +34,24 @@ const LeftSide = () => {
 
         {/* Check Price */}
 
-        <li className="left-item">
+        {/* <li className="left-item">
           <Link to="/checkprice">
             <a className="left-link" href="/">
               <i class="bi bi-coin"></i>
               <span> Check Price </span>
             </a>
           </Link>
-        </li>
+        </li> */}
 
         {/* Discount */}
 
         <li className="left-item">
-          
+          <Link to="/headandleft/discountmanage">
             <a className="left-link" href="/">
               <i class="bi bi-calculator"></i>
               <span> Discount </span>
             </a>
-          
+          </Link>
         </li>
 
         {/* Customer */}
@@ -60,27 +60,35 @@ const LeftSide = () => {
           <Link to="/headandleft/customermanagement">
             <a className="left-link" href="/">
               <i class="bi bi-people"></i>
+
               <span> Customer </span>
             </a>
           </Link>
         </li>
 
-        {/* Update Items */}
+        {/* Categories */}
 
         <li className="left-item">
-          <a className="left-link" href="/">
-            <i class="bi bi-arrow-repeat"></i>
-            <span> Update Items </span>
-          </a>
+          <Link to="/headandleft/categorymanage">
+            <a className="left-link" href="/">
+              {/* <i class="bi bi-arrow-repeat"></i> */}
+              {/* <i class="bi bi-grid-3x3-gap-fill"></i> */}
+              {/* <i class="bi bi-dice-6"></i> */}
+              <i class="bi bi-dice-5"></i>
+              <span> Categories </span>
+            </a>
+          </Link>
         </li>
 
         {/* Add Items */}
 
         <li className="left-item">
-          <a className="left-link" href="/">
-            <i class="bi bi-plus-square"></i>
-            <span> Add Items </span>
-          </a>
+          <Link to="/headandleft/manageitem">
+            <a className="left-link" href="/">
+              <i class="bi bi-plus-square"></i>
+              <span> Add Items </span>
+            </a>
+          </Link>
         </li>
 
         {/* Reports */}

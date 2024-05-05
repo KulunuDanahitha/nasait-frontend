@@ -14,91 +14,96 @@
     color: blue;
 }
 
-.left-button {
+.row1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+ .twobttns {
+    margin-left: 20%;
+    margin-right: 5%;
+ 
+} 
+
+.addstockbutton {
+    background-color: #007bff;
+    /* Blue color, adjust as needed */
+    color: #fff;
+    width: 150px;
+    margin-left: 20px;
     margin-right: 20px;
-    width: 50px;
-    height: 40px;
-    background-color: #df16c4;
-    color: #FFFFFF;
+    /* White text color */
     border: none;
+    /* Remove border */
+    padding: 10px 20px;
+    /* Add some padding inside the button */
     border-radius: 5px;
-    outline: none;
+    /* Rounded corners */
     cursor: pointer;
-    font-family: Arial, sans-serif;
+    /* Hand cursor on hover */
     font-size: 16px;
+    /* Adjust font size as needed */
     font-weight: bold;
+    /* Make text bold */
     transition: background-color 0.3s ease;
+    /* Add transition effect for background color */
 }
 
-.left-button i {
-    margin-right: 5px;
-    margin-left: 5px;
-    font-size: 20px;
-
-
+.addstockbutton:hover {
+    background-color: #0069d9;
+    /* Darker blue color on hover, adjust as needed */
 }
 
-/* Hover effect */
-.left-button:hover {
-    background-color: #45a049;
-}
-
-.middle-button{
+.addnewitembttn {
+    background-color: #28a745;
+    /* Green color, adjust as needed */
+    color: #fff;
+    /* White text color */
+    border: none;
+    /* margin-left: 2%; */
     margin-right: 20px;
-    width: 50px;
-    height: 40px;
-    background-color: #56cf0f;
-    color: #FFFFFF;
-    border: none;
+    /* Remove border */
+    padding: 10px 20px;
+    width: 150px;
+    /* Add some padding inside the button */
     border-radius: 5px;
-    outline: none;
+    /* Rounded corners */
     cursor: pointer;
-    font-family: Arial, sans-serif;
+    /* Hand cursor on hover */
     font-size: 16px;
+    /* Adjust font size as needed */
     font-weight: bold;
+    /* Make text bold */
     transition: background-color 0.3s ease;
+    /* Add transition effect for background color */
 }
 
-.middle-button i {
-    margin-right: 5px;
-    margin-left: 5px;
-    font-size: 20px;
-
-
-}
-
-
-.middle-button:hover {
-    background-color: #be880a;
-}
-
-.viewmorebutton {
-    margin-right: 20px;
-    width: 100px;
-    height: 40px;
-    background-color: #c43408;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+.addnewitembttn:hover {
+    background-color: #218838;
+    /* Darker green color on hover, adjust as needed */
 }
 
 
+/* .addnewitembttn:hover,
+.addstockbutton:hover {
+
+    opacity: 0.8;
+    
+} */
+
+
+ .item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ 
+} 
 
 .item-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    /* Adjust as needed */
+    
 }
 
-.item-container .card {
-    /* flex: 1 0 calc(33.33% - 20px); */
-    /* Adjust as needed for number of items per row */
-    /* margin-bottom: 5px; */
-}
